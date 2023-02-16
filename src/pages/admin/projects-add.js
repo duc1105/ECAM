@@ -25,8 +25,8 @@ const ProjectAdd = () => {
 
     return `<div>
         <form id="form-add">
-            <input type="text" id="name" class="border" />
-            <input type="text" id="noidung" class="border" />
+            <input type="text" id="name" class="border" placeholder="Tên Dự Án" />
+            <input type="text" id="noidung" class="border" placeholder="Nội dung" />
             <button class="btn btn-primary">Thêm</button>
         </form>
     </div>`;

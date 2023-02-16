@@ -23,7 +23,7 @@ const AboutPage = () => {
         <div>
         <p class="text-3xl   ">About me</p>
         <p class="text-lg py-2 ">I'm a computer technician with a great passion for programming.</p>
-        <p class="text-lg py-2 ">Improved my skills as a Front-End and Back-End developer</p>
+        <p class="text-lg py-2 ">Improved my skills as a Front-End  developer</p>
         <p class="text-lg  py-2">I develop websites and applications using HTML, CSS, and JavaScript.</p>
         <p class="text-lg py-2">I'm always improving myself with each project I get my hands on.</p>
         <p class="text-lg py-2">I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek to achieve my best version.</p>

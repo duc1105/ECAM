@@ -32,7 +32,7 @@ const ProjectEdit = ({ id }) => {
     });
     return `<div>
         <form id="form-edit">
-            <input type="text" id="name" class="border" value="${project.name}" />
+            <input type="text" id="name" class="border" value="${project.name}"  />
             <input type="text" id="noidung" class="border" value="${project.noidung}" />
             <button class="btn btn-primary">Sửa</button>
         </form>
