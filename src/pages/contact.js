@@ -18,7 +18,7 @@ const ContactPage = () => {
           <img class="w-15 h-20 pt-8" src="./image/phone.png" alt="">
           <div class="mt-4 pl-3">
           <b class="text-2xl " >Phone Number</b>
-          <p>Xuan Phuong,Nam Tu Liem,Ha Noi</p>
+          <p>0325587305</p>
           </div>
           </div>
 
