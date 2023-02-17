@@ -4,6 +4,11 @@ const menus = [
     { id: 3, name: "Contact", link: "/contact" },
 
 ];
+const menuss = [
+    { id: 1, name: "Project", link: "/admin/projects" },
+    { id: 2, name: "ADD", link: "/admin/projects/add" },
+
+];
 
 const projects = [
     {
@@ -30,4 +35,4 @@ const projects = [
     },
 ];
 
-export { projects, menus };
+export { projects, menus, menuss };

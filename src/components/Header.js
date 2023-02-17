@@ -2,7 +2,7 @@ import Nav from "./Nav";
 
 const Header = () => {
     return `
-        <header class="tw-bg-red-50  container ">
+        <header class="bg-gray-100 container ">
             ${Nav()}
         </header>
     

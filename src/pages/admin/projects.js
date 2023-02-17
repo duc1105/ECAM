@@ -1,4 +1,6 @@
 // import { projects } from "@/data";
+import Footer from "@/components/Footer";
+import Header_admin from "@/components/Header_admin";
 import { useEffect, useState } from "@/lib";
 const ProjectsPage = () => {
   const [data, setData] = useState([]);
@@ -28,8 +30,9 @@ const ProjectsPage = () => {
   });
   // 2
   return `<div>
-      <a href="/admin/projects/add">Thêm Mới</a>
-        <h1>Quản lý dự án</h1>
+  ${Header_admin()}
+      
+        <h1 class="text-center">Quản lý Project</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -56,9 +59,12 @@ const ProjectsPage = () => {
             `
       )
       .join("")}
-            
+      
         </tbody>
-    </div>`;
+       
+    </div>
+    `
+    ;
 };
 
 export default ProjectsPage;

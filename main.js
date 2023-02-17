@@ -12,6 +12,7 @@ import ProjectsPage from "./src/pages/projects";
 import AdminProjectPage from "./src/pages/admin/projects";
 import AdminProjectAddPage from "./src/pages/admin/projects-add";
 import AdminProjectEditPage from "./src/pages/admin/projects-edit";
+import home_admin from "@/pages/admin/home_admin";
 
 // alt + shift + o
 // option + shift + o
@@ -28,6 +29,7 @@ router.on("/post/:id", () => render(PostDetailPage, app));
 router.on("/admin/projects", () => render(AdminProjectPage, app));
 router.on("/admin/projects/add", () => render(AdminProjectAddPage, app));
 router.on("/admin/projects/:id/edit", ({ data }) => render(() => AdminProjectEditPage(data), app));
+router.on("/admin/home_admin", () => render(home_admin, app));
 
 router.notFound(() => console.log("not found page"));
 

@@ -1,3 +1,4 @@
+import Header_admin from "@/components/Header_admin";
 import { router, useEffect } from "@/lib";
 // import { projects } from "../../data";
 const ProjectAdd = () => {
@@ -23,8 +24,10 @@ const ProjectAdd = () => {
         });
     });
 
-    return `<div>
-        <form id="form-add">
+    return `
+    ${Header_admin()}
+    <div class="text-center">
+        <form id="form-add" class="">
             <input type="text" id="name" class="border" placeholder="Tên Dự Án" />
             <input type="text" id="noidung" class="border" placeholder="Nội dung" />
             <button class="btn btn-primary">Thêm</button>
