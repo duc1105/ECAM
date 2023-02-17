@@ -31,8 +31,14 @@ const ContactPage = () => {
           <p>trananhduca23@gmail.com</p>
           </div>
           </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6681.053533713437!2d105.7331211!3d21.0507651!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1676547925533!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <div class=" gap-4 grid grid-cols-2 pt-5 "> 
+      <div class="ml-2">ạvxjvbnj</div>
+          <div>
+          <iframe class="w-100 h90" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7499.199761392695!2d105.73277175973305!3d21.05134823547738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1676565371046!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          
+          </div>
         ${Footer()}
         `;
 };

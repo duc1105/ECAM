@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const AboutPage = () => {
   return `
         ${Header()}
-        <div class="container mx-auto ">
+        <div class="container mx-auto  ">
         <div class=" grid  md:grid-cols-2 gap-12 mt-28 mb-10 ">
           <div>
               <p class="text-base  py-1">Hello 👋, I'm</p>

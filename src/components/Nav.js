@@ -3,7 +3,7 @@ const Nav = () => {
   return `
       
     
-  <div class="container mx-auto flex items-center justify-between ">
+  <div class=" mx-auto flex items-center justify-between ">
   <img class="w-15 w-28" src="./image/df.png" alt="">
   ${menus
       .map(
