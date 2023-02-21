@@ -19,8 +19,8 @@ import PageNotFound from "@/pages/PageNotFound";
 // option + shift + o
 const app = document.querySelector("#app");
 
-router.on("/", () => render(HomePage, app));
-router.on("/about", () => render(AboutPage, app));
+router.on("/home", () => render(HomePage, app));
+router.on("/", () => render(AboutPage, app));
 router.on("/contact", () => render(ContactPage, app));
 router.on("/projects", () => render(ProjectsPage, app));
 router.on("/project/:id", ({ data }) => render(ProjectDetailPage(data), app));

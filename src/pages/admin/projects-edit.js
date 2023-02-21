@@ -13,9 +13,10 @@ const ProjectEdit = ({ id }) => {
     useEffect(() => {
         const formEdit = document.querySelector("#form-edit");
         const name = document.querySelector("#name");
-        const noidung = document.querySelector("#noidung");
+        const content = document.querySelector("#content");
         const avatarBlog = document.querySelector("#avatar-blog");
         const projects = document.querySelector("#projects");
+        const date = document.querySelector("#date");
 
         formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -23,8 +24,9 @@ const ProjectEdit = ({ id }) => {
             avatar = avatarBlog.files.length > 0 ? await UpImage(avatarBlog.files) : avatarBlog.accept;
             const formData = {
                 name: name.value,
-                noidung: noidung.value,
+                content: content.value,
                 projects: projects.value,
+                date: date.value,
                 avatar,
             };
             fetch("http://localhost:3000/projects/" + id, {
@@ -72,10 +74,45 @@ const ProjectEdit = ({ id }) => {
     <div class="text-center pt-4">
     <h2 class="pb-2 tw-text-gray-700 hover:tw-text-red-300">Edit Projects</h2>
         <form id="form-edit">
+        <lable class="tw-text-2xl">
+            <div>
+            Name
+            </div>
             <input type="text" id="name" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2"" value="${project.name}"  />
-            <input type="text" id="noidung" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.noidung}" />
+            </lable>
+
+            <lable class="tw-text-2xl">
+            <div>
+            Content
+            </div>
+            <input type="text" id="content" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.content}" />
+            </lable>
+
+            <lable class="tw-text-2xl">
+            <div>
+            SRC
+            </div>
             <input type="src" id="projects" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.projects}" />
-            <input type="file" accept ="${project.avatar}" class="border-2 border-gray-500 w-100 h-12 rounded-2xl mb-3 p-2" id="avatar-blog" />
+            </lable>
+
+            <lable class="tw-text-2xl">
+            <div>
+           Date
+            </div>
+            <input type="date" id="date" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.date}" />
+            </lable>
+            
+            <lable class="tw-text-2xl">
+            <div>
+           Image
+            </div>
+            <input type="file" accept ="${project.avatar}" class="border-2 border-gray-500 w-100 h-15 rounded-2xl mb-3 p-2" id="avatar-blog" />
+            </lable>
+            
+            
+           
+            
+            
           
             <button class="btn btn-primary bg-neutral-600 w-40 h-10 rounded-2xl text-white hover:tw-text-red-500 mt-2">Sửa</button>
         </form>

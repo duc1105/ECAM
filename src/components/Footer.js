@@ -3,10 +3,10 @@ const Footer = () => {
   return `
   <div class=" mt-8 mx-auto   ">
   <div class=" p-7 mt-6 bg-fter bg-zinc-700 text-white  grid grid-cols-1 md:grid-cols-3">
-    <div class=" text-xl text-center">
+    <div class=" text-xl text-center font-mono">
      Trần Anh Đức
     </div>
-    <div class="text-center ">
+    <div class="text-center font-mono ">
       This site was made with a lot of ❤️
     </div>
     <div class="text-center">

@@ -21,7 +21,7 @@ md:flex-row md:justify-end md:flex
 >
   <li>
     <a
-      class="block text-2xl p-4 hover:text-red-400 md:text-black no-underline "
+      class="block text-2xl p-4 hover:text-red-400 md:text-black no-underline font-mono "
       href="${menu.link}"
       >${menu.name}</a
     >

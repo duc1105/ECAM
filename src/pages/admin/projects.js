@@ -32,14 +32,15 @@ const ProjectsPage = () => {
   return `<div>
   ${Header_admin()}
       
-        <h1 class="text-center pt-5 pb-3">Quản lý Project</h1>
+        <h1 class="text-center pt-5 pb-3">MANAGER PRROJECTS</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Tên dự án</th>
-                    <th>Nội Dung</th>
-                    <th>Ảnh</th>
+                    <th>Name</th>
+                    <th>Content</th>
+                    <th>Date</th>
+                    <th>Image</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -50,13 +51,14 @@ const ProjectsPage = () => {
                 <tr>
                     <td>${index + 1}</td>
                     <td>${project.name}</td>
-                    <td>${project.noidung}</td>
+                    <td>${project.content}</td>
                     <td>${project.projects}</td>
+                    <td>${project.date}</td>
                     <td><img  src="${project.avatar}" alt=""></td>
                     <td>
                         <button data-id="${project.id
           }" class="btn btn-remove btn-danger">Remove</button>
-                        <a href="/admin/projects/${project.id}/edit">Sửa</a>
+                        <a href="/admin/projects/${project.id}/edit">EDIT</a>
                     </td>
                 </tr>
             `

@@ -4,8 +4,8 @@ import Header from "../components/Header";
 const ContactPage = () => {
   return `
         ${Header()}
-      <div class="grid grid-cols-2 gap-4 ml-10">
-      <div>
+      <div class="grid grid-cols-2 gap-4   tw-bg-slate-50">
+      <div class="ml-10">
       <div>
       <div class="flex">
           <img class="w-6 h-14 pt-4" src="./image/address.png" alt="">
@@ -36,7 +36,7 @@ const ContactPage = () => {
       </div>
       <hr>
       <div>
-      <b class="text-xl  ">Liên hệ với tôi</b>
+      <b class="text-xl  ">Contact</b>
       <form class="mt-3 ">
           <input type="text" placeholder="Họ và tên" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2"  >
           <input type="text" placeholder="Email" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2"  >

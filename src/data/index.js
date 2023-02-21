@@ -1,12 +1,11 @@
 const menus = [
-    { id: 1, name: "About", link: "/about" },
+    { id: 1, name: "About", link: "/" },
     { id: 2, name: "Portfolio", link: "/projects" },
     { id: 3, name: "Contact", link: "/contact" },
-
 ];
 const menuss = [
-    { id: 1, name: "Project", link: "/admin/projects" },
-    { id: 2, name: "ADD", link: "/admin/projects/add" },
+    { id: 1, name: "Projects", link: "/admin/projects" },
+    { id: 2, name: "ADD Projects", link: "/admin/projects/add" },
 
 ];
 

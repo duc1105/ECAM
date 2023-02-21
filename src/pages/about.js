@@ -4,11 +4,12 @@ import Header from "../components/Header";
 const AboutPage = () => {
   return `
         ${Header()}
-        <div class="container mx-auto  ">
+        
+        <div class="container mx-auto    ">
         <div class=" grid  md:grid-cols-2 gap-12 mt-28 mb-10 ">
           <div>
               <p class="text-base  py-1">Hello 👋, I'm</p>
-              <p class="text-7xl ">Anh Đức</p>
+              <p class="text-7xl font-mono ">Anh Đức</p>
               <p class="text-base text-lime-500 pt-4">Web developer </p>
               <p class="tw-text-[#615978] tw-text-lg tw-leading-normal"> I'm a computer technician with a focus on web development with JavaScript.</p>
               <button class="block tw-text-white bg-green-700 px-8 py-2 w-45 ml-40  mt-20  rounded-3xl text-base  hover:tw-text-red-500 "> Download CV</button>
@@ -21,7 +22,7 @@ const AboutPage = () => {
        <div class="container mx-auto">
       <div class="grid  md:grid-cols-2 gap-12 mt-28 mb-10 text-center md:text-left">
         <div>
-        <p class="tw-text-5xl tw-text-red-500 ">About me</p>
+        <p class="tw-text-5xl tw-text-red-500 font-mono ">About me</p>
         <p class="tw-text-[#615978] tw-text-lg tw-leading-normal  ">I'm a computer technician with a great passion for programming.</p>
         <p class="tw-text-[#615978] tw-text-lg tw-leading-normal  ">Improved my skills as a Front-End  developer</p>
         <p class="tw-text-[#615978] tw-text-lg tw-leading-normal  ">I develop websites and applications using HTML, CSS, and JavaScript.</p>
