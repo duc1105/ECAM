@@ -1,36 +1,55 @@
 {
   "projects": [
     {
-      "name": "ASSIGNTMENT",
-      "content": "Portfolio",
-      "projects": "https://github.com/duc1105/ECAM",
-      "date": "2023-02-21",
-      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1676949068/ducdeptrai/kbb3lay8khkvzcstb02h.png",
-      "id": 15
+      "name": "Template HTML/CSS",
+      "content": "Know how to create a Website using supporting tools and technologies such as: Visual, Bootstrap, jquer, HTML5, ..... Know how to Responsive website, use colors on the website so that it is reasonable.",
+      "link": "https://github.com/duc1105/HTML_CSS",
+      "date": "2023-02-23",
+      "General_content": "Know how to create websites and fluently use support libraries",
+      "categoryId": 3,
+      "Executor": "Trần Anh Đức",
+      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1677091633/ducdeptrai/ymcp5efr3nr0hglytgib.png",
+      "id": 1
     },
     {
-      "name": "JS Nâng Cao",
-      "content": "Thêm Sửa Xóa",
-      "projects": "https://github.com/duc1105/JS.git",
-      "date": "2023-02-21",
-      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1676948944/ducdeptrai/e2pfzxzelpnisnemdru7.png",
-      "id": 18
+      "name": "Portfolio",
+      "content": "JavaScript is a programming language used by developers to create interactive websites. From refreshing social media feeds to displaying interactive maps and animations, JavaScript capabilities can improve a website's user experience. As a client-side scripting language, JavaScript is one of the core technologies of the World Wide Web. For example, when browsing the internet, whenever you see an image carousel, a click-to-display drop-down menu, or dynamically changing element colors on a web page, that's when you see the effects of JavaScript. .",
+      "link": "https://github.com/duc1105/ECAM",
+      "date": "2023-02-23",
+      "General_content": "Know how to create a website for yourself",
+      "categoryId": 5,
+      "Executor": "Trần Anh Đức",
+      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1677122340/ducdeptrai/zedqy4phi1kjeqjxgt2b.png",
+      "id": 2
     },
     {
-      "name": "ASSIGNTMENT",
-      "content": "Portfolio",
-      "projects": "https://github.com/duc1105/ECAM",
-      "date": "2023-02-21",
-      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1676951462/ducdeptrai/mublzrafarspxzcsvrnt.png",
-      "id": 19
+      "name": "PHP1",
+      "content": "In the past, web pages were static, similar to the pages in a book. A static page mainly displays information in a fixed layout and does not do everything we would expect from a modern website. JavaScript is gradually becoming known as a browser-side technology to make web applications more flexible. Using JavaScript, browsers can respond to user interactions and change the layout of content on a web page.",
+      "link": "https://github.com/",
+      "General_content": "TemplateMo",
+      "date": "2023-02-22",
+      "Executor": "Trần Anh Đức",
+      "categoryId": 4,
+      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1677123016/ducdeptrai/tixoftijwbjftvznhxmm.jpg",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "name": "HTML5/CSS3",
+      "id": 3
     },
     {
-      "name": "ASSIGNTMENT",
-      "content": "Portfolio",
-      "projects": "https://github.com/duc1105/ECAM",
-      "date": "2023-02-21",
-      "avatar": "https://res.cloudinary.com/desrjsbvc/image/upload/v1676951463/ducdeptrai/nttbdqy493vhqwpks7no.png",
-      "id": 20
+      "name": "PHP1",
+      "id": 4
+    },
+    {
+      "name": "ECAM",
+      "id": 5
+    },
+    {
+      "name": "Trần Anh Đức",
+      "id": 6
     }
   ]
 }

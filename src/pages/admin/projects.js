@@ -38,8 +38,11 @@ const ProjectsPage = () => {
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Content</th>
+                    <th>Details</th>
+                    <th>General content</th>
+                    <th>Link</th>
                     <th>Date</th>
+                    <th>Executor</th>
                     <th>Image</th>
                     <th>Actions</th>
                 </tr>
@@ -52,13 +55,15 @@ const ProjectsPage = () => {
                     <td>${index + 1}</td>
                     <td>${project.name}</td>
                     <td>${project.content}</td>
-                    <td>${project.projects}</td>
+                    <td>${project.General_content}</td>
+                    <td>${project.link}</td>
                     <td>${project.date}</td>
-                    <td><img  src="${project.avatar}" alt=""></td>
+                    <td>${project.Executor}</td>
+                    <td><img  src="${project.avatar}" alt="" class="tw-w-[70px] tw-h-[70px]"></td>
                     <td>
                         <button data-id="${project.id
           }" class="btn btn-remove btn-danger">Remove</button>
-                        <a href="/admin/projects/${project.id}/edit">EDIT</a>
+                        <a href="/admin/projects/edit/${project.id}/${project.categoryId}">EDIT</a>
                     </td>
                 </tr>
             `

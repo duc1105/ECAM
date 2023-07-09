@@ -1,16 +1,23 @@
-import Footer from "@/components/Footer"
-import Header from "../components/Header"
+import { useEffect, useState } from "@/lib";
+import Header from "@/components/Header";
 
+const ProjectDetailPage = ({ id }) => {
+  // const currentProject = projects.find((project) => project.id == id);
+  // if (!currentProject) return "";
 
-const PostsDetailPage = () => {
+  const [project, setProject] = useState({});
+
+  useEffect(() => {
+    fetch("http://localhost:3000/projects/" + id)
+      .then((response) => response.json())
+      .then((data) => setProject(data));
+
+  }, []);
+  console.log(project)
+
   return `
-   ${Header()}
-    <div>
-     PostsDetailPage
-    </div>
-    ${Footer()}
-  `
-}
-
-export default PostsDetailPage
-
+        ${Header()}
+            <h1>${project.name}</h1>
+        `;
+};
+export default ProjectDetailPage;

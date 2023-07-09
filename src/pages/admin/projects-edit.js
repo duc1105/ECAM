@@ -1,23 +1,37 @@
 import axios from "axios";
 import Header_admin from "@/components/Header_admin";
 import { router, useEffect, useState } from "@/lib";
-const ProjectEdit = ({ id }) => {
-    const [project, setProject] = useState({});
-
+const ProjectEdit = ({ id, id_cate }) => {
+    // console.log(id_cate)
+    const [project, setProject] = useState([]);
+    const [category, setCategory] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3000/projects/" + id)
+        fetch(`http://localhost:3000/categories`)
             .then((response) => response.json())
             .then((data) => setProject(data));
+
     }, []);
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/projects/${id}?_expand=category`)
+            .then((response) => response.json())
+            .then((data1) => setCategory(data1));
+    }, []);
+    const newProject = project.filter(newpro => newpro.id != id_cate)
+    // console.log(newProject)
+    const array = [category]
+    console.log(array)
 
     useEffect(() => {
         const formEdit = document.querySelector("#form-edit");
         const name = document.querySelector("#name");
         const content = document.querySelector("#content");
         const avatarBlog = document.querySelector("#avatar-blog");
-        const projects = document.querySelector("#projects");
+        const link = document.querySelector("#link");
         const date = document.querySelector("#date");
-
+        const id_cate = document.querySelector("#id_cate");
+        const General_content = document.querySelector("#General_content");
+        const Executor = document.querySelector("#Executor");
         formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
             let avatar = "";
@@ -25,8 +39,11 @@ const ProjectEdit = ({ id }) => {
             const formData = {
                 name: name.value,
                 content: content.value,
-                projects: projects.value,
+                link: link.value,
                 date: date.value,
+                General_content: General_content.value,
+                categoryId: Number(id_cate.value),
+                Executor: Executor.value,
                 avatar,
             };
             fetch("http://localhost:3000/projects/" + id, {
@@ -37,7 +54,7 @@ const ProjectEdit = ({ id }) => {
                 body: JSON.stringify(formData),
             })
                 .then(() => router.navigate("/admin/projects"))
-                .catch((error) => console.log(error));
+
         });
     });
     const UpImage = async (files) => {
@@ -74,40 +91,84 @@ const ProjectEdit = ({ id }) => {
     <div class="text-center pt-4">
     <h2 class="pb-2 tw-text-gray-700 hover:tw-text-red-300">Edit Projects</h2>
         <form id="form-edit">
-        <lable class="tw-text-2xl">
+        <select id="id_cate" class="form-select" aria-label="Default select example">
+       
+        
+        ${newProject.map((categories) => {
+        return `
+            <option value="${categories.id}" selected>${categories.name}</option>
+`
+
+    }).join("")
+
+        }
+      
+        ${array.map((arr) => {
+            return `
+            <option value="${arr.category?.id}" selected>${arr.category?.name}</option>
+            `
+        }).join("")}
+        
+       
+        </select>
+      
+        ${array.map((load) => {
+            return `
+            <lable class="tw-text-2xl">
+            
             <div>
             Name
             </div>
-            <input type="text" id="name" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2"" value="${project.name}"  />
+            <input type="text" id="name"  class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2"" value="${load.name}"  />
+            </lable >
+
+            <lable class="tw-text-2xl">
+            <div>
+            Details
+            </div>
+            <input type="text"  id="content" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${load.content}" />
+            </lable>
+            <lable class="tw-text-2xl">
+            <div>
+            General_content
+            </div>
+            <input type="text"  id="General_content" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${load.General_content}" />
             </lable>
 
             <lable class="tw-text-2xl">
             <div>
-            Content
+            Link
             </div>
-            <input type="text" id="content" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.content}" />
-            </lable>
-
-            <lable class="tw-text-2xl">
-            <div>
-            SRC
-            </div>
-            <input type="src" id="projects" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.projects}" />
+            <input type="src" id="link" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${load.link}" />
             </lable>
 
             <lable class="tw-text-2xl">
             <div>
            Date
             </div>
-            <input type="date" id="date" class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${project.date}" />
+            <input type="date" id="date"  class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${load.date}" />
+            </lable>
+
+            <lable class="tw-text-2xl">
+            <div>
+           Date
+            </div>
+            <input type="text" id="Executor"  class="border-2 border-gray-500 w-100 h-10 rounded-2xl mb-3 p-2" value="${load.Executor}" />
             </lable>
             
             <lable class="tw-text-2xl">
             <div>
            Image
             </div>
-            <input type="file" accept ="${project.avatar}" class="border-2 border-gray-500 w-100 h-15 rounded-2xl mb-3 p-2" id="avatar-blog" />
+            <input type="file" multiple  accept ="" value="${load.avatar}" class="border-2 border-gray-500 w-100 h-15 rounded-2xl mb-3 p-2" id="avatar-blog" />
+            <div  style="width:200px">
+            <img src="${load.avatar}" alt="" style="width:200px">
+            </div>
+            
             </lable>
+
+            `
+        })}
             
             
            
@@ -115,10 +176,10 @@ const ProjectEdit = ({ id }) => {
             
           
             <button class="btn btn-primary bg-neutral-600 w-40 h-10 rounded-2xl text-white hover:tw-text-red-500 mt-2">Sửa</button>
-        </form>
+        </form >
 
-    </div>
-   `;
+    </div >
+    `;
 };
 
 export default ProjectEdit;

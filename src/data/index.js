@@ -5,7 +5,9 @@ const menus = [
 ];
 const menuss = [
     { id: 1, name: "Projects", link: "/admin/projects" },
-    { id: 2, name: "ADD Projects", link: "/admin/projects/add" },
+    { id: 4, name: "Category", link: "/admin/categories" },
+    { id: 2, name: "ADD Category", link: "/admin/add_category" },
+    { id: 3, name: "ADD Projects", link: "/admin/projects/add" },
 
 ];
 
